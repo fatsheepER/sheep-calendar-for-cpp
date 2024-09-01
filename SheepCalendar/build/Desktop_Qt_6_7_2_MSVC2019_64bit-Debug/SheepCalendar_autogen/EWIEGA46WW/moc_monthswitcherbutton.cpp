@@ -40,6 +40,7 @@ constexpr auto qt_meta_stringdata_CLASSMonthSwitcherButtonENDCLASS = QtMocHelper
     "",
     "offset",
     "setMonth",
+    "yearIndex",
     "monthIndex",
     "onPrevButtonClicked",
     "onNextButtonClicked"
@@ -66,15 +67,15 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMonthSwitcherButtonENDCLASS[] = 
        1,    1,   38,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    1,   41,    2, 0x0a,    3 /* Public */,
-       6,    0,   44,    2, 0x0a,    5 /* Public */,
-       7,    0,   45,    2, 0x0a,    6 /* Public */,
+       4,    2,   41,    2, 0x0a,    3 /* Public */,
+       7,    0,   46,    2, 0x0a,    6 /* Public */,
+       8,    0,   47,    2, 0x0a,    7 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    3,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int,    5,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    5,    6,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -95,7 +96,8 @@ Q_CONSTINIT const QMetaObject MonthSwitcherButton::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'setMonth'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'onPrevButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onNextButtonClicked'
@@ -111,7 +113,7 @@ void MonthSwitcherButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         (void)_t;
         switch (_id) {
         case 0: _t->monthHasChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 1: _t->setMonth((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 1: _t->setMonth((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         case 2: _t->onPrevButtonClicked(); break;
         case 3: _t->onNextButtonClicked(); break;
         default: ;

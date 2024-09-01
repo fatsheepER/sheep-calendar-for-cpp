@@ -2,8 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDate>
 
 #include "monthswitcherbutton.h"
+#include "calendarwidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,16 +25,18 @@ private:
     Ui::MainWindow *ui;
     QLabel *yearLabel;
     MonthSwitcherButton *monthSwitcher;
+    CalendarWidget *calendar;
 
 private:
-    int currentYear;
-    int currentMonth;
-    int currentDay;
+    QDate currentDate;
+
+signals:
+    void dateHasChanged(int year, int month);
 
 public slots:
-    // void changeMonth(int offset);
+    void changeDate(int offset);
 
 private:
-    void updateDate();
+    void setupCurrentDate();
 };
 #endif // MAINWINDOW_H

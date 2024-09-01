@@ -13,7 +13,7 @@ MonthSwitcherButton::MonthSwitcherButton(int initialMonth, QWidget *parent)
     prevButton = new QPushButton("<", this);
     nextButton = new QPushButton(">", this);
 
-    setMonth(initialMonth);
+    setMonth(0, initialMonth);
     prevButton->setStyleSheet("background-color: transparent;");
     prevButton->setFixedSize(35, 35);
     nextButton->setStyleSheet("background-color: transparent;");
@@ -27,7 +27,7 @@ MonthSwitcherButton::MonthSwitcherButton(int initialMonth, QWidget *parent)
     layout->setSpacing(10);  // 设置按钮和标签之间的间距
 
     monthLabel->setAlignment(Qt::AlignCenter);
-    monthLabel->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    // monthLabel->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
 
     // setFixedSize(115, 50);
     setStyleSheet("#MonthSwitchButton {background-color:#4d4d4d;color:#ffffff;border-radius:20px;}");
@@ -36,8 +36,10 @@ MonthSwitcherButton::MonthSwitcherButton(int initialMonth, QWidget *parent)
     connect(nextButton, &QPushButton::clicked, this, &MonthSwitcherButton::onNextButtonClicked);
 }
 
-void MonthSwitcherButton::setMonth(const int monthIndex)
+void MonthSwitcherButton::setMonth(int yearIndex, int monthIndex)
 {
+    Q_UNUSED(yearIndex);
+
     if (monthIndex <= 0 || monthIndex > 12)
     {
         currentMonth = -1;
@@ -46,6 +48,7 @@ void MonthSwitcherButton::setMonth(const int monthIndex)
 
     currentMonth = monthIndex;
 
+    // 通过本地化获取月份的中文名 是不是很聪明
     QLocale locale(QLocale::Chinese, QLocale::China);
     QString monthName = locale.monthName(currentMonth);
     monthLabel->setText(monthName);

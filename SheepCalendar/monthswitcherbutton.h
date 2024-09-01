@@ -16,7 +16,7 @@ signals:
     void monthHasChanged(int offset);
 
 public slots:
-    void setMonth(const int monthIndex);
+    void setMonth(int yearIndex, int monthIndex);
     void onPrevButtonClicked();
     void onNextButtonClicked();
 

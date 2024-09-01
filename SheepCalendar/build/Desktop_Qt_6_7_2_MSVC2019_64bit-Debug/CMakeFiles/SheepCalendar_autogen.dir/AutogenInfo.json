@@ -272,6 +272,18 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/calendarwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_calendarwidget.cpp",
+			null
+		],
+		[
+			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/datecellwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_datecellwidget.cpp",
+			null
+		],
+		[
 			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -351,6 +363,16 @@
 	"SETTINGS_FILE" : "D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Debug/CMakeFiles/SheepCalendar_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/calendarwidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/datecellwidget.cpp",
+			"MU",
+			null
+		],
 		[
 			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/main.cpp",
 			"MU",
