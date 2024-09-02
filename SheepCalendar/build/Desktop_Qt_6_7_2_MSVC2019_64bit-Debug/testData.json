@@ -1,0 +1,23 @@
+[
+    {
+        "calendarType": 1,
+        "date": "",
+        "description": "中国的传统节日，除旧迎新的时刻。",
+        "title": "中国农历新年",
+        "type": "SCFestival"
+    },
+    {
+        "date": "",
+        "description": "同时也是平安夜。",
+        "repeatingRule": 0,
+        "title": "王飞扬生日",
+        "type": "SCRepeatingEvent"
+    },
+    {
+        "date": "",
+        "description": "学正楼 206 王琼",
+        "repeatingRule": 2,
+        "title": "高级程序语言设计",
+        "type": "SCRepeatingEvent"
+    }
+]

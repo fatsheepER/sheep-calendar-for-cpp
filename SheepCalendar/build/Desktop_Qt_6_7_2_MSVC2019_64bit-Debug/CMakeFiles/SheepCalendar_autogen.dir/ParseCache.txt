@@ -5,7 +5,10 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h
  mdp:D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/datecellwidget.h
  mdp:D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h
  mdp:D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.h
+ mdp:D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scevent.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/QDate
+ mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/QJsonObject
+ mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/QString
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/q20functional.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/q20memory.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/q20type_traits.h
@@ -25,6 +28,8 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qbytearraylist.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qbytearrayview.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qcalendar.h
+ mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qcborcommon.h
+ mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qcborvalue.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qchar.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qcompare.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qcompare_impl.h
@@ -56,6 +61,8 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qiodevicebase.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qiterable.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qiterator.h
+ mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qjsonobject.h
+ mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qjsonvalue.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qlatin1stringview.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qline.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qlist.h
@@ -80,6 +87,7 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qprocessordetection.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qrect.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qrefcount.h
+ mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qregularexpression.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qscopedpointer.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qscopeguard.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qset.h
@@ -123,6 +131,7 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qtypes.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qurl.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qutf8stringview.h
+ mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/quuid.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qvariant.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qvarlengtharray.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtCore/qversiontagging.h
@@ -174,7 +183,6 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scevent.h
-D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/screpeatingrule.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.h
  mmc:Q_OBJECT
  mdp:D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.h
@@ -326,10 +334,12 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/screpeatingrule.h
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/main.cpp
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.cpp
  uic:./ui_mainwindow.h
-D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/main.cpp
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scevent.cpp
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scdayevent.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.cpp
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/calendarwidget.h
  mmc:Q_OBJECT
@@ -661,3 +671,11 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/datecellwidget.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/datecellwidget.cpp
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/LunarSolarConverter.cpp
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scfestival.h
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/screpeatingevent.h
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scdayevent.cpp
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scfestival.cpp
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/screpeatingevent.cpp
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/LunarSolarConverter.h
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/sccalendartype.h

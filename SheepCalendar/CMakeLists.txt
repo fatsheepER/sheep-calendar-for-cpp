@@ -28,6 +28,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         monthswitcherbutton.h monthswitcherbutton.cpp
         calendarwidget.h calendarwidget.cpp
         datecellwidget.h datecellwidget.cpp
+        screpeatingevent.h screpeatingevent.cpp
+        scdayevent.h scdayevent.cpp
+        scfestival.h scfestival.cpp
+        sccalendartype.h
+        LunarSolarConverter.h LunarSolarConverter.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET SheepCalendar APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

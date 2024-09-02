@@ -112,6 +112,42 @@ build CMakeFiles\SheepCalendar.dir\datecellwidget.cpp.obj: CXX_COMPILER__SheepCa
   TARGET_COMPILE_PDB = CMakeFiles\SheepCalendar.dir\
   TARGET_PDB = SheepCalendar.pdb
 
+build CMakeFiles\SheepCalendar.dir\screpeatingevent.cpp.obj: CXX_COMPILER__SheepCalendar_unscanned_Debug D$:\Documents\GitHub\sheep-calendar-for-cpp\SheepCalendar\screpeatingevent.cpp || cmake_object_order_depends_target_SheepCalendar
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -ID:\Documents\GitHub\sheep-calendar-for-cpp\SheepCalendar\build\Desktop_Qt_6_7_2_MSVC2019_64bit-Debug\SheepCalendar_autogen\include -external:ID:\Qt\6.7.2\msvc2019_64\include\QtCore -external:ID:\Qt\6.7.2\msvc2019_64\include -external:ID:\Qt\6.7.2\msvc2019_64\mkspecs\win32-msvc -external:ID:\Qt\6.7.2\msvc2019_64\include\QtWidgets -external:ID:\Qt\6.7.2\msvc2019_64\include\QtGui -external:W0
+  OBJECT_DIR = CMakeFiles\SheepCalendar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SheepCalendar.dir
+  TARGET_COMPILE_PDB = CMakeFiles\SheepCalendar.dir\
+  TARGET_PDB = SheepCalendar.pdb
+
+build CMakeFiles\SheepCalendar.dir\scdayevent.cpp.obj: CXX_COMPILER__SheepCalendar_unscanned_Debug D$:\Documents\GitHub\sheep-calendar-for-cpp\SheepCalendar\scdayevent.cpp || cmake_object_order_depends_target_SheepCalendar
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -ID:\Documents\GitHub\sheep-calendar-for-cpp\SheepCalendar\build\Desktop_Qt_6_7_2_MSVC2019_64bit-Debug\SheepCalendar_autogen\include -external:ID:\Qt\6.7.2\msvc2019_64\include\QtCore -external:ID:\Qt\6.7.2\msvc2019_64\include -external:ID:\Qt\6.7.2\msvc2019_64\mkspecs\win32-msvc -external:ID:\Qt\6.7.2\msvc2019_64\include\QtWidgets -external:ID:\Qt\6.7.2\msvc2019_64\include\QtGui -external:W0
+  OBJECT_DIR = CMakeFiles\SheepCalendar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SheepCalendar.dir
+  TARGET_COMPILE_PDB = CMakeFiles\SheepCalendar.dir\
+  TARGET_PDB = SheepCalendar.pdb
+
+build CMakeFiles\SheepCalendar.dir\scfestival.cpp.obj: CXX_COMPILER__SheepCalendar_unscanned_Debug D$:\Documents\GitHub\sheep-calendar-for-cpp\SheepCalendar\scfestival.cpp || cmake_object_order_depends_target_SheepCalendar
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -ID:\Documents\GitHub\sheep-calendar-for-cpp\SheepCalendar\build\Desktop_Qt_6_7_2_MSVC2019_64bit-Debug\SheepCalendar_autogen\include -external:ID:\Qt\6.7.2\msvc2019_64\include\QtCore -external:ID:\Qt\6.7.2\msvc2019_64\include -external:ID:\Qt\6.7.2\msvc2019_64\mkspecs\win32-msvc -external:ID:\Qt\6.7.2\msvc2019_64\include\QtWidgets -external:ID:\Qt\6.7.2\msvc2019_64\include\QtGui -external:W0
+  OBJECT_DIR = CMakeFiles\SheepCalendar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SheepCalendar.dir
+  TARGET_COMPILE_PDB = CMakeFiles\SheepCalendar.dir\
+  TARGET_PDB = SheepCalendar.pdb
+
+build CMakeFiles\SheepCalendar.dir\LunarSolarConverter.cpp.obj: CXX_COMPILER__SheepCalendar_unscanned_Debug D$:\Documents\GitHub\sheep-calendar-for-cpp\SheepCalendar\LunarSolarConverter.cpp || cmake_object_order_depends_target_SheepCalendar
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd -Zc:__cplusplus -permissive- -utf-8
+  INCLUDES = -ID:\Documents\GitHub\sheep-calendar-for-cpp\SheepCalendar\build\Desktop_Qt_6_7_2_MSVC2019_64bit-Debug\SheepCalendar_autogen\include -external:ID:\Qt\6.7.2\msvc2019_64\include\QtCore -external:ID:\Qt\6.7.2\msvc2019_64\include -external:ID:\Qt\6.7.2\msvc2019_64\mkspecs\win32-msvc -external:ID:\Qt\6.7.2\msvc2019_64\include\QtWidgets -external:ID:\Qt\6.7.2\msvc2019_64\include\QtGui -external:W0
+  OBJECT_DIR = CMakeFiles\SheepCalendar.dir
+  OBJECT_FILE_DIR = CMakeFiles\SheepCalendar.dir
+  TARGET_COMPILE_PDB = CMakeFiles\SheepCalendar.dir\
+  TARGET_PDB = SheepCalendar.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SheepCalendar
@@ -120,7 +156,7 @@ build CMakeFiles\SheepCalendar.dir\datecellwidget.cpp.obj: CXX_COMPILER__SheepCa
 #############################################
 # Link the executable SheepCalendar.exe
 
-build SheepCalendar.exe: CXX_EXECUTABLE_LINKER__SheepCalendar_Debug CMakeFiles\SheepCalendar.dir\SheepCalendar_autogen\mocs_compilation.cpp.obj CMakeFiles\SheepCalendar.dir\main.cpp.obj CMakeFiles\SheepCalendar.dir\mainwindow.cpp.obj CMakeFiles\SheepCalendar.dir\scevent.cpp.obj CMakeFiles\SheepCalendar.dir\monthswitcherbutton.cpp.obj CMakeFiles\SheepCalendar.dir\calendarwidget.cpp.obj CMakeFiles\SheepCalendar.dir\datecellwidget.cpp.obj | D$:\Qt\6.7.2\msvc2019_64\lib\Qt6Widgetsd.lib D$:\Qt\6.7.2\msvc2019_64\lib\Qt6Guid.lib D$:\Qt\6.7.2\msvc2019_64\lib\Qt6Cored.lib D$:\Qt\6.7.2\msvc2019_64\lib\Qt6EntryPointd.lib || SheepCalendar_autogen SheepCalendar_autogen_timestamp_deps
+build SheepCalendar.exe: CXX_EXECUTABLE_LINKER__SheepCalendar_Debug CMakeFiles\SheepCalendar.dir\SheepCalendar_autogen\mocs_compilation.cpp.obj CMakeFiles\SheepCalendar.dir\main.cpp.obj CMakeFiles\SheepCalendar.dir\mainwindow.cpp.obj CMakeFiles\SheepCalendar.dir\scevent.cpp.obj CMakeFiles\SheepCalendar.dir\monthswitcherbutton.cpp.obj CMakeFiles\SheepCalendar.dir\calendarwidget.cpp.obj CMakeFiles\SheepCalendar.dir\datecellwidget.cpp.obj CMakeFiles\SheepCalendar.dir\screpeatingevent.cpp.obj CMakeFiles\SheepCalendar.dir\scdayevent.cpp.obj CMakeFiles\SheepCalendar.dir\scfestival.cpp.obj CMakeFiles\SheepCalendar.dir\LunarSolarConverter.cpp.obj | D$:\Qt\6.7.2\msvc2019_64\lib\Qt6Widgetsd.lib D$:\Qt\6.7.2\msvc2019_64\lib\Qt6Guid.lib D$:\Qt\6.7.2\msvc2019_64\lib\Qt6Cored.lib D$:\Qt\6.7.2\msvc2019_64\lib\Qt6EntryPointd.lib || SheepCalendar_autogen SheepCalendar_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:windows
   LINK_LIBRARIES = D:\Qt\6.7.2\msvc2019_64\lib\Qt6Widgetsd.lib  D:\Qt\6.7.2\msvc2019_64\lib\Qt6Guid.lib  D:\Qt\6.7.2\msvc2019_64\lib\Qt6Cored.lib  mpr.lib  userenv.lib  D:\Qt\6.7.2\msvc2019_64\lib\Qt6EntryPointd.lib  shell32.lib  d3d11.lib  dxgi.lib  dxguid.lib  d3d12.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
