@@ -5,11 +5,15 @@
 #include <QStringList>
 #include <QString>
 #include <QDate>
+#include <QFile>
+#include <QJsonArray>
+#include <QJsonDocument>
 
 CalendarWidget::CalendarWidget(QWidget *parent)
     : QWidget{parent}
 {
     setupLayout();
+    loadEventsFromJson("testData.json");
     updateCalendar(QDate::currentDate().year(), QDate::currentDate().month());
 }
 
@@ -38,12 +42,23 @@ void CalendarWidget::updateCalendar(int year, int month)
             if (day > daysInMonth)
                 return;
 
+            QDate cellDate = QDate(year, month, day);
+            for (SCEvent* eve: events)
+            {
+                if (eve->isOn(cellDate))
+                {
+                    qDebug() << "Adding event!";
+                    // 后期应当修改为 cell 储存 event*，供小窗口访问
+                    dayLabels[row][col]->addEvent(eve->getTitle());
+                }
+            }
+
             dayLabels[row][col]->setDate(day);
 
-            // 仅作示范用：添加几个固定事件
-            dayLabels[row][col]->addEvent("农历新年");
-            dayLabels[row][col]->addEvent("高级程序语言设计 王琼");
-            dayLabels[row][col]->addEvent("生日");
+            // 仅作示范用：添加几个固定事件 后期删除
+            // dayLabels[row][col]->addEvent("农历新年");
+            // dayLabels[row][col]->addEvent("高级程序语言设计 王琼");
+            // dayLabels[row][col]->addEvent("生日");
 
             day++;
         }
@@ -89,4 +104,34 @@ void CalendarWidget::setupLayout()
     }
 
     setLayout(calendarLayout);
+}
+
+void CalendarWidget::loadEventsFromJson(const QString filePath)
+{
+    QFile file(filePath);
+
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        qDebug() << "打开文件失败";
+        return;
+    }
+
+    QByteArray fileData = file.readAll();
+    QJsonDocument doc = QJsonDocument::fromJson(fileData);
+    QJsonArray eventsArray = doc.array();
+
+    for (const QJsonValue &value: eventsArray)
+    {
+        QJsonObject json = value.toObject();
+        SCEvent *event = SCEvent::fromJson(json);
+        if (event)
+        {
+            events.emplace_back(event);
+            qDebug() << event->getTitle();
+        }
+    }
+
+    qDebug() << "读取文件成功！";
+
+    file.close();
 }

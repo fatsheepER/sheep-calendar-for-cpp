@@ -4,6 +4,8 @@
 
 bool SCDayEvent::isOn(QDate &queryDate)
 {
+    // qDebug() << "SCDayEvent::isOn() called!";
+
     return date == queryDate;
 }
 

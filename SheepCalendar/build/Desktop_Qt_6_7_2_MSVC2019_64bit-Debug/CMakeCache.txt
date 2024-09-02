@@ -15,6 +15,9 @@
 ########################
 
 //Path to a program.
+CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
+
+//Path to a program.
 CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/lib.exe
 
 //No help, variable specified on the command line.
@@ -24,7 +27,7 @@ CMAKE_BUILD_TYPE:STRING=Debug
 CMAKE_COLOR_DIAGNOSTICS:BOOL=1
 
 //CXX compiler
-CMAKE_CXX_COMPILER:STRING=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/cl.exe
+CMAKE_CXX_COMPILER:STRING=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/cl.exe
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=-DQT_QML_DEBUG /DWIN32 /D_WINDOWS /GR /EHsc
@@ -50,9 +53,12 @@ CMAKE_CXX_OUTPUT_EXTENSION:STRING=.obj
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
 
 //No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/HostX64/x64/cl.exe
+CMAKE_C_COMPILER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/cl.exe
 
 CMAKE_C_OUTPUT_EXTENSION:STRING=
+
+//Path to a program.
+CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
 //Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=/machine:x64
@@ -129,8 +135,8 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 //Read-only single-machine data (etc)
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
-//Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/link.exe
+//No help, variable specified on the command line.
+CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
 
 //make program
 CMAKE_MAKE_PROGRAM:FILEPATH=C:/PROGRA~1/MICROS~4/2022/COMMUN~1/Common7/IDE/COMMON~1/MICROS~1/CMake/Ninja/ninja.exe
@@ -157,6 +163,15 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Path to a program.
 CMAKE_MT:FILEPATH=C:/Program Files (x86)/Windows Kits/10/bin/10.0.22621.0/x64/mt.exe
+
+//Path to a program.
+CMAKE_NM:FILEPATH=CMAKE_NM-NOTFOUND
+
+//Path to a program.
+CMAKE_OBJCOPY:FILEPATH=CMAKE_OBJCOPY-NOTFOUND
+
+//Path to a program.
+CMAKE_OBJDUMP:FILEPATH=CMAKE_OBJDUMP-NOTFOUND
 
 //No help, variable specified on the command line.
 CMAKE_PREFIX_PATH:PATH=D:/Qt/6.7.2/msvc2019_64
@@ -206,6 +221,9 @@ CMAKE_RC_FLAGS_RELEASE:STRING=
 //Flags for Windows Resource Compiler during RELWITHDEBINFO builds.
 CMAKE_RC_FLAGS_RELWITHDEBINFO:STRING=
 
+//Path to a program.
+CMAKE_READELF:FILEPATH=CMAKE_READELF-NOTFOUND
+
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
 CMAKE_SHARED_LINKER_FLAGS:STRING=/machine:x64
@@ -252,6 +270,12 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during the creation of static libraries
 // during RELWITHDEBINFO builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+//Path to a program.
+CMAKE_STRIP:FILEPATH=CMAKE_STRIP-NOTFOUND
+
+//Path to a program.
+CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -331,6 +355,8 @@ WINDEPLOYQT_EXECUTABLE:FILEPATH=D:/Qt/6.7.2/msvc2019_64/bin/windeployqt.exe
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: CMAKE_ADDR2LINE
+CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -361,6 +387,8 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_STANDARD_LIBRARIES
 CMAKE_CXX_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_DLLTOOL
+CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
 CMAKE_EDIT_COMMAND:INTERNAL=D:/Qt/Tools/CMake_64/bin/cmake-gui.exe
 //Executable file format
@@ -440,8 +468,14 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_NM
+CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+//ADVANCED property for variable: CMAKE_OBJCOPY
+CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_OBJDUMP
+CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib
@@ -459,6 +493,8 @@ CMAKE_RC_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_RC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RC_FLAGS_RELWITHDEBINFO
 CMAKE_RC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_READELF
+CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=D:/Qt/Tools/CMake_64/share/cmake-3.29
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
@@ -485,6 +521,10 @@ CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_STRIP
+CMAKE_STRIP-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_TAPI
+CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Threads

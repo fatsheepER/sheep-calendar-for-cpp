@@ -104,6 +104,8 @@ void MainWindow::saveTestDataToJson(const QString filePath)
     SCRepeatingEvent *myBirthday = new SCRepeatingEvent("王飞扬生日", "同时也是平安夜。", QDate(2003, 12, 24), SCRepeatingRule::Yearly);
     SCRepeatingEvent *codingClass = new SCRepeatingEvent("高级程序语言设计", "学正楼 206 王琼", QDate(2024, 9, 3), SCRepeatingRule::Weekly);
 
+    qDebug() << "codingClass Date:" << codingClass->getDate();
+
     std::vector<SCEvent*> testEvents = {cnNewYear, myBirthday, codingClass};
 
     // 创建 Json 数组

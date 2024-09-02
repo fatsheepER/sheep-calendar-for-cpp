@@ -6,6 +6,7 @@
 #include <QLabel>
 
 #include "datecellwidget.h"
+#include "scevent.h"
 
 class CalendarWidget : public QWidget
 {
@@ -22,8 +23,10 @@ private:
     QGridLayout *calendarLayout;
     QLabel* weekLabels[7];
     DateCellWidget* dayLabels[6][7];
+    std::vector<SCEvent*> events;
 
-    void setupLayout();
+    void setupLayout(); // // 初始化布局
+    void loadEventsFromJson(const QString filePath); // 从 Json 文件中读取 Event 对 events
 };
 
 #endif // CALENDARWIDGET_H

@@ -32,8 +32,19 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "CMAKE_OBJDUMP-NOTFOUND")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Debug/SheepCalendar.exe")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SheepCalendar.exe" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SheepCalendar.exe")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "CMAKE_STRIP-NOTFOUND" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/SheepCalendar.exe")
+    endif()
+  endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

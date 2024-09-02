@@ -15,7 +15,7 @@ protected:
 
 public:
     SCEvent(const QString _title, const QString& _description, const QDate& _date): title(_title)
-        , description(_description) {}
+        , description(_description), date(_date) {}
 public:
     virtual bool isOn(QDate&) = 0; // 具体判断各种事件是否在该日期上发生
 
@@ -27,6 +27,7 @@ public:
     // getter
     QString getTitle() { return title; }
     QString getDescription() { return description; }
+    QDate getDate() { return date; }
 
     // setter
     void setTitle(const QString _title) { title = _title; }

@@ -1,20 +1,20 @@
 [
     {
         "calendarType": 1,
-        "date": "",
+        "date": "2025-01-01",
         "description": "中国的传统节日，除旧迎新的时刻。",
         "title": "中国农历新年",
         "type": "SCFestival"
     },
     {
-        "date": "",
+        "date": "2003-12-24",
         "description": "同时也是平安夜。",
         "repeatingRule": 0,
         "title": "王飞扬生日",
         "type": "SCRepeatingEvent"
     },
     {
-        "date": "",
+        "date": "2024-09-03",
         "description": "学正楼 206 王琼",
         "repeatingRule": 2,
         "title": "高级程序语言设计",

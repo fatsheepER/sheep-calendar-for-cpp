@@ -6,13 +6,16 @@
 SCFestival::SCFestival(const QString _title, const QString _description, const QDate& _date, SCCalendarType _ct):
     SCEvent(_title, _description, _date),
     SCDayEvent(_title, _description, _date),
-    SCRepeatingEvent(_title, _description, _date, SCRepeatingRule::Yearly)
+    SCRepeatingEvent(_title, _description, _date, SCRepeatingRule::Yearly),
+    ct(_ct)
 {
-    ct = _ct;
+
 }
 
 bool SCFestival::isOn(QDate &queryDate)
 {
+    // qDebug() << "SCFestival::isOn() called!";
+
     if (ct == SCCalendarType::Solar)
         return SCRepeatingEvent::isOn(queryDate);
 
@@ -41,7 +44,7 @@ QJsonObject SCFestival::toJson() const
 
 SCFestival *SCFestival::fromJson(const QJsonObject &json)
 {
-    QString title = json["name"].toString();
+    QString title = json["title"].toString();
     QString description = json["description"].toString();
     QDate date = QDate::fromString(json["date"].toString(), Qt::ISODate);
     SCCalendarType ct = static_cast<SCCalendarType>(json["calendarType"].toInt());

@@ -4,6 +4,8 @@
 
 bool SCRepeatingEvent::isOn(QDate& queryDate)
 {
+    // qDebug() << "SCRepeatingEvent::isOn() called!";
+
     switch (rule)
     {
     case SCRepeatingRule::Yearly:
