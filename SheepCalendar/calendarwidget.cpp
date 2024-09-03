@@ -87,7 +87,7 @@ void CalendarWidget::setupLayout()
     for (int i = 0; i < 7; i++)
     {
         weekLabels[i] = new QLabel(days[i], this);
-        weekLabels[i]->setStyleSheet("font-size: 18px; font-weight: bold;");
+        weekLabels[i]->setStyleSheet("font-size: 18px; font-weight: bold; border-bottom: 1px solid #ccc;");
         weekLabels[i]->setAlignment(Qt::AlignRight);
         weekLabels[i]->setMinimumHeight(20);
         calendarLayout->addWidget(weekLabels[i], 0, i);
@@ -96,8 +96,7 @@ void CalendarWidget::setupLayout()
     // 在行的底部添加一条水平线
     QFrame *hLine = new QFrame(this);
     hLine->setFrameShape(QFrame::HLine); // 设置为水平线
-    hLine->setFrameShadow(QFrame::Sunken); // 设置阴影样式（可选）
-    calendarLayout->addWidget(hLine, 0, 0, 1, 7);
+    calendarLayout->addWidget(hLine, 1, 0, 1, 7);
 
     // 初始化日期 最多 6 行 7 列
     for (int row = 0; row < 6; row++)
@@ -107,11 +106,10 @@ void CalendarWidget::setupLayout()
             dayLabels[row][col] = new DateCellWidget(this);
             dayLabels[row][col]->setMinimumSize(50, 40);
             dayLabels[row][col]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-            calendarLayout->addWidget(dayLabels[row][col], row + 1, col);
+            calendarLayout->addWidget(dayLabels[row][col], row + 2, col);
         }
 
-        // 行底部水平线
-        calendarLayout->addWidget(hLine, row + 1, 0, 1, 7); // 添加水平线，跨越所有7列
+        // 行底部水平线？
     }
 
     setLayout(calendarLayout);

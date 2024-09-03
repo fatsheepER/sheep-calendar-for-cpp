@@ -183,7 +183,6 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scevent.h
-D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/screpeatingrule.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.h
  mmc:Q_OBJECT
  mdp:D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.h
@@ -335,12 +334,13 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsexports.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/screpeatingrule.h
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/main.cpp
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.cpp
  uic:./ui_mainwindow.h
-D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/main.cpp
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scevent.cpp
-D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.cpp
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scdayevent.h
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/monthswitcherbutton.cpp
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/calendarwidget.h
  mmc:Q_OBJECT
  mdp:D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/calendarwidget.h
@@ -684,8 +684,8 @@ D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/datecellwidget.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qtwidgetsglobal.h
  mdp:D:/Qt/6.7.2/msvc2019_64/include/QtWidgets/qwidget.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/datecellwidget.cpp
-D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scfestival.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/LunarSolarConverter.cpp
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scfestival.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/screpeatingevent.h
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scdayevent.cpp
 D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/scfestival.cpp

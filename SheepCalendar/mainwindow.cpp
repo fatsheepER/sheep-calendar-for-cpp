@@ -6,7 +6,6 @@
 #include "monthswitcherbutton.h"
 #include "calendarwidget.h"
 #include "scevent.h"
-#include "scdayevent.h"
 #include "screpeatingevent.h"
 #include "scfestival.h"
 #include "screpeatingrule.h"
@@ -19,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     setWindowTitle("Sheep Calendar v0.0.1");
-    setMinimumSize(800, 600);
+    setMinimumSize(800, 650);
 
     // 初始化日期为当前日期
     setupCurrentDate();
