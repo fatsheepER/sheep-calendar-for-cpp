@@ -68,6 +68,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(monthSwitcher, &MonthSwitcherButton::monthHasChanged,
             this, &MainWindow::changeDate);
 
+    connect(monthSwitcher, &MonthSwitcherButton::monthHasChangedBack,
+            this, &MainWindow::changeDateBack);
+
     connect(this, &MainWindow::dateHasChanged, monthSwitcher,
             &MonthSwitcherButton::setMonth);
 
@@ -85,6 +88,15 @@ void MainWindow::changeDate(int offset)
     currentDate = currentDate.addMonths(offset);
 
     // 更新年份 以后应该转到 monthSwitcher
+    yearLabel->setText(QString::number(currentDate.year()));
+
+    emit dateHasChanged(currentDate.year(), currentDate.month());
+}
+
+void MainWindow::changeDateBack()
+{
+    currentDate = QDate::currentDate();
+
     yearLabel->setText(QString::number(currentDate.year()));
 
     emit dateHasChanged(currentDate.year(), currentDate.month());

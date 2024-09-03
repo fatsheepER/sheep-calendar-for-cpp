@@ -39,6 +39,7 @@ signals:
 
 public slots:
     void changeDate(int offset);
+    void changeDateBack();
     void onTestButtonClicked();
 
 private:

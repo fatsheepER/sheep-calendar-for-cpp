@@ -39,11 +39,13 @@ constexpr auto qt_meta_stringdata_CLASSMonthSwitcherButtonENDCLASS = QtMocHelper
     "monthHasChanged",
     "",
     "offset",
+    "monthHasChangedBack",
     "setMonth",
     "yearIndex",
     "monthIndex",
     "onPrevButtonClicked",
-    "onNextButtonClicked"
+    "onNextButtonClicked",
+    "onCenterButtonClicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -56,26 +58,30 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMonthSwitcherButtonENDCLASS[] = 
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   38,    2, 0x06,    1 /* Public */,
+       1,    1,   50,    2, 0x06,    1 /* Public */,
+       4,    0,   53,    2, 0x06,    3 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       4,    2,   41,    2, 0x0a,    3 /* Public */,
-       7,    0,   46,    2, 0x0a,    6 /* Public */,
-       8,    0,   47,    2, 0x0a,    7 /* Public */,
+       5,    2,   54,    2, 0x0a,    4 /* Public */,
+       8,    0,   59,    2, 0x0a,    7 /* Public */,
+       9,    0,   60,    2, 0x0a,    8 /* Public */,
+      10,    0,   61,    2, 0x0a,    9 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Int,    3,
+    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    5,    6,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    6,    7,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -94,6 +100,8 @@ Q_CONSTINIT const QMetaObject MonthSwitcherButton::staticMetaObject = { {
         // method 'monthHasChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'monthHasChangedBack'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'setMonth'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
@@ -101,6 +109,8 @@ Q_CONSTINIT const QMetaObject MonthSwitcherButton::staticMetaObject = { {
         // method 'onPrevButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onNextButtonClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onCenterButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -113,9 +123,11 @@ void MonthSwitcherButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         (void)_t;
         switch (_id) {
         case 0: _t->monthHasChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 1: _t->setMonth((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 2: _t->onPrevButtonClicked(); break;
-        case 3: _t->onNextButtonClicked(); break;
+        case 1: _t->monthHasChangedBack(); break;
+        case 2: _t->setMonth((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 3: _t->onPrevButtonClicked(); break;
+        case 4: _t->onNextButtonClicked(); break;
+        case 5: _t->onCenterButtonClicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -124,6 +136,13 @@ void MonthSwitcherButton::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
             using _t = void (MonthSwitcherButton::*)(int );
             if (_t _q_method = &MonthSwitcherButton::monthHasChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            using _t = void (MonthSwitcherButton::*)();
+            if (_t _q_method = &MonthSwitcherButton::monthHasChangedBack; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 1;
                 return;
             }
         }
@@ -149,13 +168,13 @@ int MonthSwitcherButton::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 6;
     }
     return _id;
 }
@@ -165,5 +184,11 @@ void MonthSwitcherButton::monthHasChanged(int _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void MonthSwitcherButton::monthHasChangedBack()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 QT_WARNING_POP

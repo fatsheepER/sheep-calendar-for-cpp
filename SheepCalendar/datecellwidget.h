@@ -20,6 +20,8 @@ private:
 public:
     void setDate(int date); // 设置日期
     void addEvent(QString event); // 添加新的事件
+    void addStretch(); // 添加弹簧 向上对齐
+    void setLabelStyle(bool isToday); // 设置日期风格 如果是今天就粗体标红
     void clear(); // 清空自己的信息
 };
 

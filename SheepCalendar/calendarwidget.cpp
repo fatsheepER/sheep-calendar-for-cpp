@@ -43,6 +43,16 @@ void CalendarWidget::updateCalendar(int year, int month)
                 return;
 
             QDate cellDate = QDate(year, month, day);
+
+            // 设置日期
+            dayLabels[row][col]->setDate(day);
+
+
+            // 设定日期字体风格
+            bool isToday = (cellDate == QDate::currentDate());
+            dayLabels[row][col]->setLabelStyle(isToday);
+
+            // 遍历事件 检测
             for (SCEvent* eve: events)
             {
                 if (eve->isOn(cellDate))
@@ -53,7 +63,8 @@ void CalendarWidget::updateCalendar(int year, int month)
                 }
             }
 
-            dayLabels[row][col]->setDate(day);
+            // 向上对齐 还得专门写个方法 烦
+            dayLabels[row][col]->addStretch();
 
             // 仅作示范用：添加几个固定事件 后期删除
             // dayLabels[row][col]->addEvent("农历新年");

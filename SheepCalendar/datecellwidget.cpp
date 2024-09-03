@@ -7,7 +7,7 @@ DateCellWidget::DateCellWidget(QWidget *parent)
     : QWidget{parent}
 {
     dateLabel = new QLabel(this);
-    dateLabel->setStyleSheet("font-size: 20px;");
+    // dateLabel->setStyleSheet("font-size: 20px;");
     layout = new QVBoxLayout(this);
     layout->addWidget(dateLabel);
     setLayout(layout);
@@ -23,6 +23,23 @@ void DateCellWidget::addEvent(QString event)
 {
     QLabel *eventLabel = new QLabel(event, this);
     layout->addWidget(eventLabel);
+}
+
+void DateCellWidget::addStretch()
+{
+    layout->addStretch();
+}
+
+void DateCellWidget::setLabelStyle(bool isToday)
+{
+    if (isToday)
+    {
+        dateLabel->setStyleSheet("color: #E34F41; font-size: 20px; font-weight: bold;");
+    }
+    else
+    {
+        dateLabel->setStyleSheet("font-size: 20px;");
+    }
 }
 
 void DateCellWidget::clear()
