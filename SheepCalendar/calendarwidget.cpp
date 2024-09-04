@@ -1,4 +1,5 @@
 #include "calendarwidget.h"
+#include "eventlistdialog.h"
 
 #include <QLabel>
 #include <QGridLayout>
@@ -110,6 +111,15 @@ void CalendarWidget::saveEventsToJson(const QString filePath)
     file.close();
 
     qDebug() << "数据保存成功！";
+}
+
+void CalendarWidget::editEventsInDialog()
+{
+    EventListDialog dialog(events, this);
+    dialog.exec();
+
+    // 重新加载一次日历事件
+    updateCalendar(QDate::currentDate().year(), QDate::currentDate().month());
 }
 
 void CalendarWidget::setupLayout()

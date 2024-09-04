@@ -2,5 +2,6 @@
 #include "EWIEGA46WW/moc_calendarwidget.cpp"
 #include "EWIEGA46WW/moc_datecellwidget.cpp"
 #include "EWIEGA46WW/moc_eventeditordialog.cpp"
+#include "EWIEGA46WW/moc_eventlistdialog.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_monthswitcherbutton.cpp"

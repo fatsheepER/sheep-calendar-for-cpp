@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 72,
+				"line" : 74,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 55,
+				"line" : 57,
 				"parent" : 0
 			},
 			{
@@ -376,18 +376,20 @@
 				15,
 				17,
 				19,
-				22
+				22,
+				24,
+				26
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "SheepCalendar_autogen::@6890427a1f51a3e7e1df"
+			"id" : "SheepCalendar_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "SheepCalendar_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "SheepCalendar_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "SheepCalendar::@6890427a1f51a3e7e1df",
@@ -502,7 +504,9 @@
 				15,
 				17,
 				19,
-				22
+				22,
+				24,
+				26
 			]
 		},
 		{
@@ -520,7 +524,9 @@
 				18,
 				20,
 				21,
-				23
+				23,
+				25,
+				27
 			]
 		},
 		{
@@ -528,14 +534,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				24
+				28
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				25
+				29
 			]
 		}
 	],
@@ -666,6 +672,28 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "LunarSolarConverter.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "eventeditordialog.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "eventeditordialog.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "eventlistdialog.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "eventlistdialog.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

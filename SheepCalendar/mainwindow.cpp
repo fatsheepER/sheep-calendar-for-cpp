@@ -27,6 +27,10 @@ MainWindow::MainWindow(QWidget *parent)
     QWidget *centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
 
+    // 设置日期定时检查
+    dateCheckTimer = new QTimer(this);
+    dateCheckTimer->start(60000);
+
     // 主布局将界面分为上下两部分
     QVBoxLayout *mainLayout = new QVBoxLayout(centralWidget);
 
@@ -43,29 +47,36 @@ MainWindow::MainWindow(QWidget *parent)
     yearLabel->setAlignment(Qt::AlignRight);
     topLayout->addWidget(yearLabel);
 
-    // 创建测试案例文件 添加事件 保存 || 月份切换
+    // 添加事件 编辑 保存 || 月份切换
     QHBoxLayout *monthSwitcherLayout = new QHBoxLayout();
     topLayout->addLayout(monthSwitcherLayout);
-
-    // 创建测试案例 后期删除
-    testButton = new QPushButton("测试数据", topWidget);
-    monthSwitcherLayout->addWidget(testButton);
-    connect(testButton, &QPushButton::clicked, this, &MainWindow::onTestButtonClicked);
 
     // 添加事件
     addButton = new QPushButton("添加事件", topWidget);
     monthSwitcherLayout->addWidget(addButton);
 
+    // 打开编辑列表
+    editButton = new QPushButton("编辑");
+    monthSwitcherLayout->addWidget(editButton);
+
     // 保存至 Json 文件
     saveButton = new QPushButton("保存", topWidget);
     monthSwitcherLayout->addWidget(saveButton);
 
+    // 月份切换
     monthSwitcher = new MonthSwitcherButton(currentDate.month(), topWidget);
     monthSwitcher->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
     monthSwitcherLayout->addStretch(); // 整体向右对齐
     monthSwitcherLayout->addWidget(monthSwitcher);
 
-    // topLayout->addStretch(); // 上半部分结束
+    // 数字时钟
+    clockLabel = new QLabel(this);
+    clockLabel->setAlignment(Qt::AlignRight);
+    clockTimer = new QTimer(this);
+    clockTimer->start(1000); // 每秒更新一次
+    topLayout->addWidget(clockLabel);
+
+    // 上半部分结束
 
     // 日历部分
     calendar = new CalendarWidget(centralWidget);
@@ -74,34 +85,72 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     // 信号连接
+    // 前/后切换月份
     connect(monthSwitcher, &MonthSwitcherButton::monthHasChanged,
             this, &MainWindow::changeDate);
 
+    // 回到当前月
     connect(monthSwitcher, &MonthSwitcherButton::monthHasChangedBack,
             this, &MainWindow::changeDateBack);
 
+    // 更新 switcher 的显示月份
     connect(this, &MainWindow::dateHasChanged, monthSwitcher,
             &MonthSwitcherButton::setMonth);
 
+    // 更新 calendar 内容
     connect(this, &MainWindow::dateHasChanged,
             calendar, &CalendarWidget::updateCalendar);
 
+    // 点击新建事件
     connect(addButton, &QPushButton::clicked,
             this, &MainWindow::onAddButtonClicked);
 
+    // 向 calendar 新增事件
     connect(this, &MainWindow::newEventCreated,
             calendar, &CalendarWidget::addEvent);
 
+    // 点击保存
     connect(saveButton, &QPushButton::clicked,
             this, &MainWindow::onSaveButtonClicked);
 
-    connect(this, &MainWindow::saveEvents, calendar,
-            &CalendarWidget::saveEventsToJson);
+    // 向文件保存
+    connect(this, &MainWindow::saveEvents,
+            calendar, &CalendarWidget::saveEventsToJson);
+
+    // 点击编辑
+    connect(editButton, &QPushButton::clicked,
+            this, &MainWindow::onEditButtonClicked);
+
+    // 在 dialog 中编辑
+    connect(this, &MainWindow::editEvents,
+            calendar, &CalendarWidget::editEventsInDialog);
+
+    // 更新文字时间
+    connect(clockTimer, &QTimer::timeout,
+            this, &MainWindow::updateClock);
+
+    // 检查日期变更 自动翻页
+    connect(dateCheckTimer, &QTimer::timeout,
+            this, &MainWindow::checkDateChange);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::updateClock()
+{
+    QString currentTime = QTime::currentTime().toString("HH:mm:ss");
+    clockLabel->setText(currentTime);
+}
+
+void MainWindow::checkDateChange()
+{
+    if (QDate::currentDate().month() != lastCheckedDate.month())
+    {
+        changeDateBack(); // 正好可以复用
+    }
 }
 
 void MainWindow::changeDate(int offset)
@@ -123,11 +172,6 @@ void MainWindow::changeDateBack()
     emit dateHasChanged(currentDate.year(), currentDate.month());
 }
 
-void MainWindow::onTestButtonClicked()
-{
-    saveTestDataToJson("testData.json");
-}
-
 void MainWindow::onAddButtonClicked()
 {
     EventEditorDialog dialog(this);
@@ -146,74 +190,14 @@ void MainWindow::onSaveButtonClicked()
     emit saveEvents("testData.json");
 }
 
-void MainWindow::saveTestDataToJson(const QString filePath)
+void MainWindow::onEditButtonClicked()
 {
-    qDebug() << filePath;
-
-    // 用于测试的几个事件
-    SCFestival *cnNewYear = new SCFestival("中国农历新年", "中国的传统节日，除旧迎新的时刻。", QDate(2025, 1, 1), SCCalendarType::Lunar);
-    SCRepeatingEvent *myBirthday = new SCRepeatingEvent("王飞扬生日", "同时也是平安夜。", QDate(2003, 12, 24), SCRepeatingRule::Yearly);
-    SCRepeatingEvent *codingClass = new SCRepeatingEvent("高级程序语言设计", "学正楼 206 王琼", QDate(2024, 9, 3), SCRepeatingRule::Weekly);
-
-    qDebug() << "codingClass Date:" << codingClass->getDate();
-
-    std::vector<SCEvent*> testEvents = {cnNewYear, myBirthday, codingClass};
-
-    // 创建 Json 数组
-    QJsonArray jsonArray;
-    for (SCEvent *eve: testEvents)
-    {
-        jsonArray.append(eve->toJson());
-    }
-
-    // 创建 Json 文档
-    QJsonDocument jsonDocument(jsonArray);
-
-    // 写入路径
-    QFile file(filePath);
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        qDebug() << "无法写入目标路径！";
-        return;
-    }
-
-    file.write(jsonDocument.toJson());
-    file.close();
-
-    qDebug() << "测试数据写入成功！";
+    emit editEvents();
 }
 
 void MainWindow::setupCurrentDate()
 {
     // 将日期设置为当前月份的第一天 更稳妥
     currentDate = QDate::currentDate().addDays(1 - QDate::currentDate().day());
-
-    // 执行此步时其他 widget 还没有完成初始化，所以不用 emit
-}
-
-void MainWindow::loadEventsFromJson(const QString filePath)
-{
-    QFile file(filePath);
-
-    if (!file.open(QIODevice::ReadOnly))
-    {
-        qDebug() << "打开文件失败";
-        return;
-    }
-
-    QByteArray fileData = file.readAll();
-    QJsonDocument doc = QJsonDocument::fromJson(fileData);
-    QJsonArray eventsArray = doc.array();
-
-    for (const QJsonValue &value: eventsArray)
-    {
-        QJsonObject json = value.toObject();
-        SCEvent *event = SCEvent::fromJson(json);
-        if (event)
-        {
-            events.emplace_back(event);
-        }
-    }
-
-    file.close();
+    lastCheckedDate = currentDate;
 }

@@ -12,6 +12,8 @@ SheepCalendar_autogen/timestamp: \
 	D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/datecellwidget.h \
 	D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/eventeditordialog.cpp \
 	D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/eventeditordialog.h \
+	D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/eventlistdialog.cpp \
+	D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/eventlistdialog.h \
 	D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/main.cpp \
 	D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.cpp \
 	D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h \

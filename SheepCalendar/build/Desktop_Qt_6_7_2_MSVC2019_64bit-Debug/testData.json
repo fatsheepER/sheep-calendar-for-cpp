@@ -7,24 +7,38 @@
         "type": "SCFestival"
     },
     {
-        "date": "2003-12-24",
-        "description": "同时也是平安夜。",
-        "repeatingRule": 0,
-        "title": "王飞扬生日",
-        "type": "SCRepeatingEvent"
-    },
-    {
-        "date": "2024-09-03",
-        "description": "学正楼 206 王琼",
-        "repeatingRule": 2,
-        "title": "高级程序语言设计",
-        "type": "SCRepeatingEvent"
-    },
-    {
         "calendarType": 1,
         "date": "2024-05-05",
         "description": "中国四大传统节日之一，时间为农历五月初五。",
         "title": "端午节",
+        "type": "SCFestival"
+    },
+    {
+        "date": "2003-12-24",
+        "description": "同时也是平安夜。",
+        "repeatingRule": 0,
+        "title": "王飞扬的生日",
+        "type": "SCRepeatingEvent"
+    },
+    {
+        "calendarType": 1,
+        "date": "2024-08-15",
+        "description": "",
+        "title": "中秋节",
+        "type": "SCFestival"
+    },
+    {
+        "calendarType": 0,
+        "date": "2024-10-01",
+        "description": "中华人民共和国国庆节。",
+        "title": "国庆节",
+        "type": "SCFestival"
+    },
+    {
+        "calendarType": 0,
+        "date": "2024-09-10",
+        "description": "",
+        "title": "教师节",
         "type": "SCFestival"
     }
 ]

@@ -20,6 +20,7 @@ public slots:
     void updateCalendar(int year, int month);
     void addEvent(SCEvent *event);
     void saveEventsToJson(const QString filePath);
+    void editEventsInDialog();
 
 private:
     QGridLayout *calendarLayout;

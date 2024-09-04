@@ -34,6 +34,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         sccalendartype.h
         LunarSolarConverter.h LunarSolarConverter.cpp
         eventeditordialog.h eventeditordialog.cpp
+        eventlistdialog.h eventlistdialog.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET SheepCalendar APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
