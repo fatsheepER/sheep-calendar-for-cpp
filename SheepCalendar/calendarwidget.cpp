@@ -77,6 +77,41 @@ void CalendarWidget::updateCalendar(int year, int month)
     }
 }
 
+void CalendarWidget::addEvent(SCEvent *event)
+{
+    events.emplace_back(event);
+    qDebug() << "新建习惯添加成功";
+
+    // 重新加载一次日历事件
+    updateCalendar(QDate::currentDate().year(), QDate::currentDate().month());
+}
+
+void CalendarWidget::saveEventsToJson(const QString filePath)
+{
+    // 创建 Json 数组
+    QJsonArray jsonArray;
+    for (SCEvent *eve: events)
+    {
+        jsonArray.append(eve->toJson());
+    }
+
+    // 创建 Json 文档
+    QJsonDocument jsonDocument(jsonArray);
+
+    // 写入路径
+    QFile file(filePath);
+    if (!file.open(QIODevice::WriteOnly))
+    {
+        qDebug() << "无法写入目标路径！";
+        return;
+    }
+
+    file.write(jsonDocument.toJson());
+    file.close();
+
+    qDebug() << "数据保存成功！";
+}
+
 void CalendarWidget::setupLayout()
 {
     calendarLayout = new QGridLayout(this);

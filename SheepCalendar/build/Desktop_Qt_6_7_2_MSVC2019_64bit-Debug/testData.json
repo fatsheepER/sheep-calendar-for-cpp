@@ -19,5 +19,12 @@
         "repeatingRule": 2,
         "title": "高级程序语言设计",
         "type": "SCRepeatingEvent"
+    },
+    {
+        "calendarType": 1,
+        "date": "2024-05-05",
+        "description": "中国四大传统节日之一，时间为农历五月初五。",
+        "title": "端午节",
+        "type": "SCFestival"
     }
 ]

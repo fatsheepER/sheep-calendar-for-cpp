@@ -10,6 +10,7 @@
 #include "scfestival.h"
 #include "screpeatingrule.h"
 #include "sccalendartype.h"
+#include "eventeditordialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -42,13 +43,22 @@ MainWindow::MainWindow(QWidget *parent)
     yearLabel->setAlignment(Qt::AlignRight);
     topLayout->addWidget(yearLabel);
 
-    // 创建测试案例文件 || 月份切换
+    // 创建测试案例文件 添加事件 保存 || 月份切换
     QHBoxLayout *monthSwitcherLayout = new QHBoxLayout();
     topLayout->addLayout(monthSwitcherLayout);
 
+    // 创建测试案例 后期删除
     testButton = new QPushButton("测试数据", topWidget);
     monthSwitcherLayout->addWidget(testButton);
     connect(testButton, &QPushButton::clicked, this, &MainWindow::onTestButtonClicked);
+
+    // 添加事件
+    addButton = new QPushButton("添加事件", topWidget);
+    monthSwitcherLayout->addWidget(addButton);
+
+    // 保存至 Json 文件
+    saveButton = new QPushButton("保存", topWidget);
+    monthSwitcherLayout->addWidget(saveButton);
 
     monthSwitcher = new MonthSwitcherButton(currentDate.month(), topWidget);
     monthSwitcher->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -75,6 +85,18 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(this, &MainWindow::dateHasChanged,
             calendar, &CalendarWidget::updateCalendar);
+
+    connect(addButton, &QPushButton::clicked,
+            this, &MainWindow::onAddButtonClicked);
+
+    connect(this, &MainWindow::newEventCreated,
+            calendar, &CalendarWidget::addEvent);
+
+    connect(saveButton, &QPushButton::clicked,
+            this, &MainWindow::onSaveButtonClicked);
+
+    connect(this, &MainWindow::saveEvents, calendar,
+            &CalendarWidget::saveEventsToJson);
 }
 
 MainWindow::~MainWindow()
@@ -86,7 +108,7 @@ void MainWindow::changeDate(int offset)
 {
     currentDate = currentDate.addMonths(offset);
 
-    // 更新年份 以后应该转到 monthSwitcher
+    // 更新年份 转到 monthSwitcher 会更好？
     yearLabel->setText(QString::number(currentDate.year()));
 
     emit dateHasChanged(currentDate.year(), currentDate.month());
@@ -104,6 +126,24 @@ void MainWindow::changeDateBack()
 void MainWindow::onTestButtonClicked()
 {
     saveTestDataToJson("testData.json");
+}
+
+void MainWindow::onAddButtonClicked()
+{
+    EventEditorDialog dialog(this);
+    if (dialog.exec() == QDialog::Accepted) // 用户选择保存
+    {
+        SCEvent *event = dialog.createEvent();
+        if (event)
+        {
+            emit newEventCreated(event);
+        }
+    }
+}
+
+void MainWindow::onSaveButtonClicked()
+{
+    emit saveEvents("testData.json");
 }
 
 void MainWindow::saveTestDataToJson(const QString filePath)

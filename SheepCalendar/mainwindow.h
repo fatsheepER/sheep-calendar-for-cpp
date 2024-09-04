@@ -29,6 +29,8 @@ private:
     QPushButton *testButton;
     MonthSwitcherButton *monthSwitcher;
     CalendarWidget *calendar;
+    QPushButton *addButton;
+    QPushButton *saveButton;
 
 private:
     QDate currentDate;
@@ -36,11 +38,15 @@ private:
 
 signals:
     void dateHasChanged(int year, int month);
+    void newEventCreated(SCEvent *event);
+    void saveEvents(const QString filePath);
 
 public slots:
     void changeDate(int offset);
     void changeDateBack();
     void onTestButtonClicked();
+    void onAddButtonClicked();
+    void onSaveButtonClicked();
 
 private:
     void setupCurrentDate();

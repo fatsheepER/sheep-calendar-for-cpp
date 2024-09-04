@@ -18,6 +18,8 @@ signals:
 
 public slots:
     void updateCalendar(int year, int month);
+    void addEvent(SCEvent *event);
+    void saveEventsToJson(const QString filePath);
 
 private:
     QGridLayout *calendarLayout;
