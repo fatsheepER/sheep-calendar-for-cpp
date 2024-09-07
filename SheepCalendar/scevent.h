@@ -1,7 +1,6 @@
 #ifndef SCEVENT_H
 #define SCEVENT_H
 
-// class SCReminder {}; // 提醒应当如何完成？
 #include <QString>
 #include <QDate>
 #include <QJsonObject>
@@ -16,6 +15,7 @@ protected:
 public:
     SCEvent(const QString _title, const QString& _description, const QDate& _date): title(_title)
         , description(_description), date(_date) {}
+    virtual ~SCEvent() = default;
 public:
     virtual bool isOn(QDate&) = 0; // 具体判断各种事件是否在该日期上发生
 

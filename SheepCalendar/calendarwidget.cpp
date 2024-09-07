@@ -35,7 +35,8 @@ void CalendarWidget::updateCalendar(int year, int month)
         }
     }
 
-    // 填充日期和事件 暂时还没有完成事件类的设计
+    // 填充日期和事件
+    std::vector<SCEvent*> events = manager.getEvents();
     for (int row = 0; row < 6; row++)
     {
         for (int col = startColumn; col < 7; col++)
@@ -80,7 +81,7 @@ void CalendarWidget::updateCalendar(int year, int month)
 
 void CalendarWidget::addEvent(SCEvent *event)
 {
-    events.emplace_back(event);
+    manager.addEvent(event);
     qDebug() << "新建习惯添加成功";
 
     // 重新加载一次日历事件
@@ -89,32 +90,12 @@ void CalendarWidget::addEvent(SCEvent *event)
 
 void CalendarWidget::saveEventsToJson(const QString filePath)
 {
-    // 创建 Json 数组
-    QJsonArray jsonArray;
-    for (SCEvent *eve: events)
-    {
-        jsonArray.append(eve->toJson());
-    }
-
-    // 创建 Json 文档
-    QJsonDocument jsonDocument(jsonArray);
-
-    // 写入路径
-    QFile file(filePath);
-    if (!file.open(QIODevice::WriteOnly))
-    {
-        qDebug() << "无法写入目标路径！";
-        return;
-    }
-
-    file.write(jsonDocument.toJson());
-    file.close();
-
-    qDebug() << "数据保存成功！";
+    manager.saveEventsToJson(filePath);
 }
 
 void CalendarWidget::editEventsInDialog()
 {
+    std::vector<SCEvent*>& events = manager.getEvents();
     EventListDialog dialog(events, this);
     dialog.exec();
 
@@ -162,30 +143,5 @@ void CalendarWidget::setupLayout()
 
 void CalendarWidget::loadEventsFromJson(const QString filePath)
 {
-    QFile file(filePath);
-
-    if (!file.open(QIODevice::ReadOnly))
-    {
-        qDebug() << "打开文件失败";
-        return;
-    }
-
-    QByteArray fileData = file.readAll();
-    QJsonDocument doc = QJsonDocument::fromJson(fileData);
-    QJsonArray eventsArray = doc.array();
-
-    for (const QJsonValue &value: eventsArray)
-    {
-        QJsonObject json = value.toObject();
-        SCEvent *event = SCEvent::fromJson(json);
-        if (event)
-        {
-            events.emplace_back(event);
-            qDebug() << event->getTitle();
-        }
-    }
-
-    qDebug() << "读取文件成功！";
-
-    file.close();
+    manager.loadEventsFromJson(filePath);
 }

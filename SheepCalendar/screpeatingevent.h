@@ -14,7 +14,6 @@ public:
 protected:
     SCRepeatingRule rule;
 
-    // SCEvent interface
 public:
     bool isOn(QDate &) override;
     QJsonObject toJson() const override;

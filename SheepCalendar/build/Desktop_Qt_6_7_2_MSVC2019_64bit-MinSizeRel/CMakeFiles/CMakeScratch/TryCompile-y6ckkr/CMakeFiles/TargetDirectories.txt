@@ -1,0 +1,3 @@
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/build/Desktop_Qt_6_7_2_MSVC2019_64bit-MinSizeRel/CMakeFiles/CMakeScratch/TryCompile-y6ckkr/CMakeFiles/cmTC_3bba9.dir
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/build/Desktop_Qt_6_7_2_MSVC2019_64bit-MinSizeRel/CMakeFiles/CMakeScratch/TryCompile-y6ckkr/CMakeFiles/edit_cache.dir
+D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/build/Desktop_Qt_6_7_2_MSVC2019_64bit-MinSizeRel/CMakeFiles/CMakeScratch/TryCompile-y6ckkr/CMakeFiles/rebuild_cache.dir

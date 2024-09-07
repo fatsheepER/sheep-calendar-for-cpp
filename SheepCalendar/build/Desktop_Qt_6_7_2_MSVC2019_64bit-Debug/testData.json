@@ -14,13 +14,6 @@
         "type": "SCFestival"
     },
     {
-        "date": "2003-12-24",
-        "description": "同时也是平安夜。",
-        "repeatingRule": 0,
-        "title": "王飞扬的生日",
-        "type": "SCRepeatingEvent"
-    },
-    {
         "calendarType": 1,
         "date": "2024-08-15",
         "description": "",
@@ -40,5 +33,12 @@
         "description": "",
         "title": "教师节",
         "type": "SCFestival"
+    },
+    {
+        "date": "2024-09-05",
+        "description": "学正楼 206 王琼",
+        "repeatingRule": 2,
+        "title": "高级程序语言设计",
+        "type": "SCRepeatingEvent"
     }
 ]

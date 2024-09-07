@@ -7,7 +7,6 @@ DateCellWidget::DateCellWidget(QWidget *parent)
     : QWidget{parent}
 {
     dateLabel = new QLabel(this);
-    // dateLabel->setStyleSheet("font-size: 20px;");
     layout = new QVBoxLayout(this);
     layout->addWidget(dateLabel);
     setLayout(layout);
@@ -18,7 +17,7 @@ void DateCellWidget::setDate(int date)
     dateLabel->setText(QString::number(date));
 }
 
-// 暂时使用 QString，未来会使用 QEvent 代替
+
 void DateCellWidget::addEvent(QString event)
 {
     QLabel *eventLabel = new QLabel(event, this);

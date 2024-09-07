@@ -38,7 +38,6 @@ private:
 private:
     QDate currentDate; // 当前展示的日期
     QDate lastCheckedDate; // 上一次日期检查时的日期 只要月份不变就不会更新
-    std::vector<SCEvent*> events;
 
 signals:
     void dateHasChanged(int year, int month);
@@ -57,7 +56,5 @@ public slots:
 
 private:
     void setupCurrentDate();
-    void loadEventsFromJson(const QString filePath);
-    void saveTestDataToJson(const QString filePath);
 };
 #endif // MAINWINDOW_H

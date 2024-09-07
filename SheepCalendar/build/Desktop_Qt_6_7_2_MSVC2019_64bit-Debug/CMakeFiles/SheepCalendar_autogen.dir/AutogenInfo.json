@@ -302,6 +302,12 @@
 			null
 		],
 		[
+			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/eventmanager.h",
+			"MU",
+			"EWIEGA46WW/moc_eventmanager.cpp",
+			null
+		],
+		[
 			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -427,6 +433,11 @@
 		],
 		[
 			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/eventlistdialog.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/eventmanager.cpp",
 			"MU",
 			null
 		],

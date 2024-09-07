@@ -6,10 +6,6 @@
 #include "monthswitcherbutton.h"
 #include "calendarwidget.h"
 #include "scevent.h"
-#include "screpeatingevent.h"
-#include "scfestival.h"
-#include "screpeatingrule.h"
-#include "sccalendartype.h"
 #include "eventeditordialog.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -18,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    setWindowTitle("Sheep Calendar v0.0.1");
+    setWindowTitle("Sheep Calendar");
     setMinimumSize(800, 650);
 
     // 初始化日期为当前日期
@@ -69,19 +65,19 @@ MainWindow::MainWindow(QWidget *parent)
     monthSwitcherLayout->addStretch(); // 整体向右对齐
     monthSwitcherLayout->addWidget(monthSwitcher);
 
-    // 数字时钟
-    clockLabel = new QLabel(this);
-    clockLabel->setAlignment(Qt::AlignRight);
-    clockTimer = new QTimer(this);
-    clockTimer->start(1000); // 每秒更新一次
-    topLayout->addWidget(clockLabel);
-
     // 上半部分结束
 
     // 日历部分
     calendar = new CalendarWidget(centralWidget);
     mainLayout->addWidget(calendar, 3);
     // calendar->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
+    // 数字时钟
+    clockLabel = new QLabel(this);
+    clockLabel->setAlignment(Qt::AlignRight);
+    clockTimer = new QTimer(this);
+    clockTimer->start(1000); // 每秒更新一次
+    mainLayout->addWidget(clockLabel, 0);
 
 
     // 信号连接
@@ -165,7 +161,7 @@ void MainWindow::changeDate(int offset)
 
 void MainWindow::changeDateBack()
 {
-    currentDate = QDate::currentDate();
+    currentDate = QDate::currentDate().addDays(1 - QDate::currentDate().day());
 
     yearLabel->setText(QString::number(currentDate.year()));
 

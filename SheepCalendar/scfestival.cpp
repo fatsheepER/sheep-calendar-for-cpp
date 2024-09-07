@@ -8,9 +8,7 @@ SCFestival::SCFestival(const QString _title, const QString _description, const Q
     SCDayEvent(_title, _description, _date),
     SCRepeatingEvent(_title, _description, _date, SCRepeatingRule::Yearly),
     ct(_ct)
-{
-
-}
+    { }
 
 bool SCFestival::isOn(QDate &queryDate)
 {

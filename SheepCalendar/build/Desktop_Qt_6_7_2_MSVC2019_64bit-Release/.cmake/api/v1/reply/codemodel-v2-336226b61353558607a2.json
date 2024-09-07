@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-76a869067fbc238751fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SheepCalendar",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "SheepCalendar::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SheepCalendar-Release-77d8c0dafdc3d70998e0.json",
+					"name" : "SheepCalendar",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SheepCalendar_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SheepCalendar_autogen-Release-501a5513238fe88d318d.json",
+					"name" : "SheepCalendar_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SheepCalendar_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SheepCalendar_autogen_timestamp_deps-Release-5c7d31372094c4072d38.json",
+					"name" : "SheepCalendar_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar/build/Desktop_Qt_6_7_2_MSVC2019_64bit-Release",
+		"source" : "D:/Documents/GitHub/sheep-calendar-for-cpp/SheepCalendar"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

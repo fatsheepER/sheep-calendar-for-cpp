@@ -30,7 +30,6 @@ MonthSwitcherButton::MonthSwitcherButton(int initialMonth, QWidget *parent)
     layout->setContentsMargins(0, 0, 0, 0);  // 去掉布局边距
     layout->setSpacing(10);  // 设置按钮和标签之间的间距
 
-    // setFixedSize(115, 50);
     setStyleSheet("#MonthSwitchButton {background-color:#4d4d4d;color:#ffffff;border-radius:20px;}");
 
     connect(prevButton, &QPushButton::clicked, this, &MonthSwitcherButton::onPrevButtonClicked);

@@ -71,8 +71,6 @@ void EventListDialog::removeEvent(int index)
 
     qDebug() << "Deleting index:" << index;
 
-    // SCEvent *deletedEvent = events.at(index);
-    // delete deletedEvent;
     events.erase(events.begin() + index);
 
     setupUI();
